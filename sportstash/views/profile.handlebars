@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="welcome col-auto">
+    <h2 style="margin-top: 10px;">Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="profile-main row mt-4">
+  <div class="profile-container d-flex justify-content-center align-items-center">
+    <div class="profile-card">
+      <div class="upper">
+        <img class="header-image" src="https://cdn.schoolblocks.com/organizations/ecfb5e78-28e9-44b8-b8a9-80d6d50b77b0/blocks/0e286c56-f95a-44af-9cc1-5dd6e916f215/ct48qr-440-4402160_welcome-to-xlr8-sports-sports-banner-design-png.png" class="img-fluid">
+      </div>
+      <div class="user text-center">
+        <div class="profile">
+          <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" class="rounded-circle" width="80">
+        </div>
+      </div>
+      <div class="mt-5 text-center">
+        <h4 class="mb-0">{{name}}</h4>
+        <span class="text-muted d-block mb-2"></span>
+        <a href="/cart/{{this.id}}"><button class="btn btn-primary btn-sm follow">View Cart</button></a>
+        <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>

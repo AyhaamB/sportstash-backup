@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Stash</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body>
+  <main class="container container-fluid mt-5">
+    {{#each products}}
+    <a href="/product/{{this.id}}" class="product-link">
+      <div id="prodcard" class="product-card" style="background-image: url('{{this.image}}');
+      background-size: cover;">
+        <h2 class="product-title">{{this.product_name}}</h2>
+        <p class="condition">Condition: {{this.condition}}</p>
+      </div>
+    </a>
+    {{/each}}
+
+<div class="all-adspace">
+  AD SPACE
+</div>
+
+  </main>
+
+  <footer>
+  </footer>
+  </div>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

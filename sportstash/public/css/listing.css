@@ -1,0 +1,95 @@
+body {
+    background-color: #F2F2F2;
+    color: darkslategray;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 680px;
+}
+
+.list-info {
+    height: 400px;
+    width: 400px;
+    display: inline;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    background-color: white;
+    margin-top: 5px;
+}
+
+#list-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.list-info p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.list-description {
+    height: 200px;
+    width: 600px;
+    margin-left: 5px;
+    background-color: white;
+    position: relative;
+    top: -180px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.list-description p {
+    padding: 15px;
+}
+
+.list-review {
+    height: 200px;
+    width: 400px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    position: relative;
+    top: -180px;
+    background-color: white;
+}
+
+.list-review p {
+    padding: 15px;
+}
+
+.list-adspace {
+    height: 600px;
+    margin-top: 5px;
+    width: 300px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.product-card-list {
+    height: 400px !important;
+    width: 600px !important;
+}
+
+#item-price {
+    font-size: 60px;
+    margin-top: 70px;
+}
+
+#add-cart {
+    height: 50px;
+    width: 300px;
+    position: relative;
+    right: -50px;
+    margin-top: 10px;
+}
+
+#else-add-cart {
+    position: relative;
+    height: 50px;
+    width: 300px;
+    right: -50px;
+    margin-top: 10px;
+}

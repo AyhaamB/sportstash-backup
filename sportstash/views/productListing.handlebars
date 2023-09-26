@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund My Project!</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/listing.css">
+</head>
+
+
+<body>
+    <div class="list-container">
+        <div id="prodcard" class="product-card-list" style="background-image: url('{{product.image}}');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: right; box-shadow: 0px 3px 15px rgba(0,0,0,0.2);">
+        </div>
+        <div class="list-info">
+            <h2 id="list-name">{{product.product_name}}</h2>
+            <p>Condition: {{product.condition}}</p>
+            <p id="item-price">${{product.price}}</p>
+            {{#if logged_in}}
+            <button id="add-cart">Add To Cart</button>
+            {{else}}
+            <a href="/login" ><button id="else-add-cart">Login to Add to Cart</button> </a>
+            {{/if}}
+        </div>
+        
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><div class="list-adspace" id="list-adtext">Explore CSS</div></a>
+
+        <div class="list-description">
+            <p>Product Description:</p>
+            <p>{{product.description}}</p>
+        </div>
+        <div class="list-review">
+            <p>Product Reviews:</p>
+        </div>
+    </div>
+
+</body>
+<footer>
+</footer>
+</div>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+<script src="/js/addCart.js"></script>
+{{/if}}
+</body>
+
+</html>
